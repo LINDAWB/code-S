@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  background-color: #fff;
+  font-family: "Raleway", Times New Roman, Times, serif;
+  margin: 40px;
+}
+
+/* retrait du soulignement et de la couleur de police bleue des liens hypertextes des menus des sections header et footer */
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* Section header */
+header {
+  border: solid #000; /* => pour aide visuelle du bloc nav*/
+  display: grid;
+  grid-template-columns: 66% 33%;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* menu nav au survol*/
+nav a:hover {
+  color: #0065fc;
+  border-top: solid #0065fc;
+  padding: 3%;
+}
+
+/* Section quote */
+#quote {
+  border: solid #000; /* => pour aide visuelle du bloc quote*/
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+/* Section barre de recherche */
+#barreDeRecherche {
+  background-color: aqua; /* => pour aide visuelle du bloc barre de recherche*/
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+/* Section boutons de filtrage */
+
+#boutonsFiltrage {
+  background-color: yellowgreen; /* => pour aide visuelle du bloc*/
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+}
+
+.iconeFiltre {
+  background-color: #deebff;
+  border-radius: 15px;
+  height: 20px;
+  padding: 2px;
+}
+
+#boutonsFiltrage button {
+  background-color: #fff;
+  font-weight: bold;
+}
+/* section hébergement (sH)=> divisé en 2 blocs : bloc "hébergement Marseille" (hM) et bloc aside "Les plus populaires" (lPp) */
+#sH {
+  display: inline-grid;
+  width: 100%;
+  grid-template-columns: 66% 33%;
+  justify-content: space-between;
+}
+/* 1er bloc hébergements à Marseille */
+.photosH {
+  display: inline-grid;
+  grid-template-columns: 33% 33% 33%;
+}
+
+#lPp {
+  display: inline-grid;
+  grid-template-columns: 166% 33%;
+}
+
+/* division section hebergement (sH) en 2 blocs : bloc "hébergement Marseille" (hM) et bloc "Les plus populaires" (lPp)
+#sH {
+  display: flex;
+}*/
+
+/* display bloc photos de la section hébergement et de la section Activités par la même occasion
+.photos {
+  display: flex;
+  flex-wrap: wrap;
+}*/
+
+.blocGris {
+  background-color: #f2f2f2;
+  border-radius: 20px;
+}
+
+article {
+  border-radius: 20px;
+  border: solid #fff 10px;
+  background-color: #fff;
+  margin: 30px;
+}
+
+img {
+  border-radius: 20px 20px 0 0;
+}
+
+h2 {
+  margin: 35px;
+}
+
+#aP {
+  height: 40px;
+  margin: 30px;
+}
+
+/* section aside */
+aside img {
+  border-radius: 20px 0 0 20px;
+}
+
+aside article {
+  display: flex;
+}
+
+/* section Activités */
+.photoActivité {
+  box-shadow: 0 0 20px #f2f2f2;
+}
+
+#blocImgActivités {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* background-color: red; pour aide visuelle */
+}
+
+#blocImgActivités h3 {
+  height: 10%;
+  /* background-color: aqua; pour aide visuelle */
+}
+
+/*.divH3 {
+  border: 10px solid greenyellow;  pour aide visuelle
+} */
+
+#card1 {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  background-color: blue; /*pour aide visuelle */
+}
+
+.bigImage {
+  /*border: 10px solid black;  pour aide visuelle */
+  max-width: 98%;
+  max-height: 98%;
+  justify-self: center;
+}
+
+.mediumImage {
+  /*  border: 10px solid yellow; pour aide visuelle */
+  height: 300px;
+}
+
+/*.littleImage {
+  /* border: 10px solid green; pour aide visuelle
+}*/
+
+#card2 {
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+#card3 {
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+#card4 {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+#card5 {
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+#card6 {
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+/* section footer */
+ul {
+  list-style: none;
+}
+
+#footerMenu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: #f2f2f2;
+}
+
+#footerMenu h3 {
+  margin-left: 40px;
+}
+
+#footerMenu li {
+  margin-bottom: 10px;
+}
+
+/* Phone Portrait
+@media only screen
+  and (min-width: 0px)
+  and (max-width: 375px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    body {
+
+    }
+}*/
+
+/* Tablet Portrait and Landscape
+@media only screen
+  and (min-width: 376px)
+  and (max-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    body {
+
+    }
+}*/
+
+/* Laptop----------- Non-Retina Screens -----------
+@media only screen
+  and (min-width: 1025px)
+  and (max-width: 1440px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    body {
+
+    }
+} */

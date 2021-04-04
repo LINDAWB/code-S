@@ -1,0 +1,176 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: crimson;
+}
+
+#grill {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  grid-template-rows: 1fr 4fr 5fr 4fr 1fr;
+  grid-template-areas:
+    "header header"
+    "main main"
+    "article1 aside"
+    "article2 article2"
+    "LindaDev LindaDev";
+}
+
+.contenair {
+  /* Code à supprimer supprimer Start */
+  font-size: 20;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 4px;
+  /* Code à supprimer supprimer End */
+}
+
+header {
+  /* Code à supprimer supprimer Start */
+  background-color: aquamarine;
+  /* Code à supprimer supprimer End */
+  grid-area: header;
+}
+
+header#menu {
+  display: grid;
+  grid-template-columns: 4fr repeat(3, 1fr);
+  grid-template-areas: "logo nav1 nav2 nav3";
+  position: relative;
+}
+
+.logo {
+  margin-top: 30px;
+  height: 65px;
+}
+
+li {
+  list-style: none;
+  text-align: center;
+  padding-right: 30px;
+  color: blue;
+}
+
+#menu ul li a {
+  text-decoration: none;
+}
+
+figcaption {
+  background-color: darksalmon;
+  grid-area: logo;
+  position: absolute;
+  margin-left: 0px;
+  object-position: 0% 50%;
+  padding-left: 20px;
+  height: 100%;
+}
+
+nav.nav1 {
+  background-color: chartreuse;
+  padding-top: 8px;
+  grid-area: nav1;
+  border-top: 3px solid blue;
+}
+
+nav.nav2 {
+  background-color: yellow;
+  padding-top: 8px;
+  grid-area: nav2;
+}
+
+nav.nav3 {
+  background-color: darksalmon;
+  padding-top: 8px;
+  grid-area: nav3;
+}
+
+/*
+ul li.nav1 {
+  background-color: chartreuse;
+  grid-area: nav1;
+}
+
+ul li..nav2 {
+  background-color: blueviolet;
+  grid-area: nav2;
+}
+
+ul li..nav3 {
+  background-color: darksalmon;
+  grid-area: nav3;
+}
+*/
+
+main {
+  /* Code à supprimer supprimer Start */
+  background-color: coral;
+  padding: 20px;
+  /* Code à supprimer supprimer End */
+  grid-area: main;
+}
+
+article.article1 {
+  /* Code à supprimer supprimer Start */
+  background-color: darkkhaki;
+  padding: 20px;
+  /* Code à supprimer supprimer End */
+  grid-area: article1;
+}
+
+aside {
+  /* Code à supprimer supprimer Start */
+  background-color: goldenrod;
+  padding: 20px;
+  /* Code à supprimer supprimer End */
+  grid-area: aside;
+}
+
+article.article2 {
+  /* Code à supprimer supprimer Start */
+  background-color: hotpink;
+  padding: 20px;
+  /* Code à supprimer supprimer End */
+  grid-area: article2;
+}
+
+footer {
+  /* Code à supprimer supprimer Start */
+  background-color: springgreen;
+  padding: 20px;
+  /* Code à supprimer supprimer End */
+  grid-area: LindaDev;
+}
+
+/* Format tablet */
+@media screen and (min-width: 620px) and (max-width: 980px) {
+}
+
+/* Format mobil */
+
+@media screen and (max-width: 619px) {
+  #grill {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "main"
+      "aside"
+      "article1"
+      "article2"
+      "LindaDev";
+  }
+
+  #menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "logo nav3"
+      "nav1 nav2";
+  }
+
+  .logo {
+    height: 130px;
+  }
+}

@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Début format Web */
+
+body {
+  font-family: "Raleway", Times New Roman, Times, serif;
+  padding: 10px;
+}
+
+/* Début conteneur  de la <div id="grill"> représentant le body à diviser en blocs */
+#divDuBody {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  grid-template-rows: 1fr 4fr 5fr 4fr 1fr;
+  grid-template-areas:
+    "header  header"
+    "main main"
+    "article1 aside"
+    "article2 article2"
+    "footer footer";
+}
+
+div.container {
+  border: solid black; /*aide visuelle*/
+}
+/* Fin conteneur <div id="grill"> représentant le body */
+
+/* Début bloc Header  format Web */
+header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 4fr repeat(3, 1fr);
+  grid-template-areas: "logo nav1 nav2 nav3";
+}
+
+#logo {
+  grid-area: logo;
+}
+
+#nav1 {
+  grid-area: nav1;
+}
+
+#nav2 {
+  grid-area: nav2;
+}
+
+#nav3 {
+  grid-area: nav3;
+}
+
+figure {
+  margin: 0;
+}
+
+header li {
+  list-style: none;
+  padding-right: 30px;
+  text-align: center;
+}
+
+header a {
+  text-decoration: none;
+  color: black;
+}
+
+/* menu nav au survol*/
+header nav:hover {
+  color: #0065fc;
+  border-top: solid #0065fc;
+}
+/* Fin bloc Header  format Web */
+
+/* Début bloc Main (zone Recherche)  format Web */
+main {
+  grid-area: main;
+  display: grid;
+  grid-template-rows: repeat(4, fr);
+  grid-template-areas:
+    "introRecherche"
+    "barreDeRecherche"
+    "filtres"
+    "résultat";
+}
+
+/* Début 1ère section (Introduction Recherche)  format Web */
+/* masquage titre h1 format mobile */
+#h1Mobile {
+  display: none;
+}
+/* Fin 1ère section (Introduction Recherche)  format Web */
+
+/* Début 2ème section (Barre de recherche)  format Web  */
+form {
+  display: grid;
+  grid-template-columns: 40px 250px 100px 40px;
+  height: 45px;
+}
+
+label i {
+  padding-left: 13px;
+  padding-top: 13px;
+}
+
+label {
+  background-color: #f2f2f2;
+  border-radius: 10px 0 0 10px;
+}
+
+input {
+  border: solid #f2f2f2;
+  border-right: none;
+  font-weight: bold;
+}
+
+.buttonRecherche {
+  background-color: #0065fc;
+  border-radius: 0 10px 10px 0;
+  height: 100%;
+  border: solid #0065fc;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Masquage du bouton de recherche du format mobile */
+#buttonMobile {
+  display: none;
+}
+/* Fin 2ème section (Barre de recherche)  format Web */
+
+/* Début 3ème section (Filtres)  format Web */
+section#filtres {
+  display: grid;
+  grid-template-columns: 90px 800px;
+  grid-template-areas:
+    "introFiltre"
+    "blocFiltres";
+  height: 50px;
+  padding-top: 30px;
+  font-weight: bold;
+  font-size: 17px;
+  background-color: aquamarine /* aide visuelle */;
+}
+
+div#blocFiltres {
+  background-color: greenyellow; /* aide visuelle */
+  display: grid;
+  grid-template-columns: 200px 180px 200px 250px;
+  grid-column-gap: 30px;
+  grid-template-rows: 1;
+  height: 40px;
+  grid-template-areas: "unDesFiltres" "unDesFiltres" "unDesFiltres" "unDesFiltres";
+}
+/*
+#filtres span {
+  border: solid #deebff;
+  border-radius: 100px;
+}*/
+div.unDesFiltres {
+  background-color: plum;
+  display: grid;
+  grid-template-columns: 50px 200px;
+  height: 100%;
+  border: solid black;
+  border-radius: 100px;
+}
+
+.divIcone {
+  border: solid black;
+  border-radius: 100%;
+  width: 40px;
+  height: 100%;
+  background-color: #deebff;
+  color: #0065fc;
+}
+
+/*
+button.buttonFiltre {
+  background-color: yellow;
+  height: 20px;
+  font-size: 17px;
+  font-weight: bold;
+  border: solid #f2f2f2;
+  border-radius: 20px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+.spanIcone {
+  background-color: red;
+  height: 60px;
+}
+.spanLibellé {
+  background-color: green;
+  width: ;
+}*/
+/* Fin 3ème section (Filtres)  format Web */
+
+/* Fin Main (zone Recherche)  format Web */
+
+#article1 {
+  background-color: yellow;
+  grid-area: article1;
+}
+
+aside {
+  background-color: blue;
+  grid-area: aside;
+}
+
+#article2 {
+  background-color: yellowgreen;
+  grid-area: article2;
+}
+
+/* Fin bloc Main  format Web */
+
+/* Début bloc Footer  format Web*/
+footer {
+  grid-area: footer;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: #f2f2f2;
+}
+
+footer h3 {
+  margin-left: 40px;
+}
+
+footer li {
+  margin-bottom: 10px;
+  list-style: none;
+  text-decoration: none;
+}
+
+footer a {
+  text-decoration: none;
+  color: #000;
+}
+/* Fin bloc Footer  format Web*/
+
+/* FIn format Web */
+
+/* Début format Mobile */
+@media screen and (max-width: 619px) {
+  #divDuBody {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "main"
+      "aside"
+      "article1"
+      "article2"
+      "footer";
+  }
+
+  /* Début bloc Header  format Mobile */
+  header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "logo nav3"
+      "nav1 nav2";
+    border-bottom: solid #f2f2f2;
+  }
+
+  #logo {
+    grid-area: logo;
+    /* padding-left: 20px; */
+  }
+
+  #nav1 {
+    grid-area: nav1;
+  }
+
+  #nav2 {
+    grid-area: nav2;
+  }
+
+  #nav3 {
+    grid-area: nav3;
+    padding-left: 70px;
+  }
+
+  header nav:hover {
+    color: #0065fc;
+    border-bottom: solid #0065fc;
+    border-top: none;
+  }
+  /* Fin bloc Header  format Mobile */
+
+  /* Début bloc Main  format Mobile */
+
+  /* Début 1ère section (Introduction recherche)  format Mobile*/
+  #h1Web {
+    display: none;
+  }
+
+  #h1Mobile {
+    display: block;
+  }
+  /* Fin 1ère section (Introduction recherche)  format Mobile */
+
+  /*  Début 2ème section (Barre de recherche)  format Mobile */
+  #buttonMobile {
+    display: inline;
+    width: 45px;
+  }
+
+  #buttonWeb {
+    display: none;
+  }
+  /* Fin 2ème section (Barre de recherche)  format Mobile */
+
+  /* Fiin bloc Main  format Mobile */
+
+  /* Début bloc Footer  format Mobile */
+  footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(10, 1fr);
+  }
+  /* Fin bloc Footer  format Mobile */
+}
+/* Fin format Mobile */
